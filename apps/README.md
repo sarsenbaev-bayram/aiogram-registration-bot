@@ -80,3 +80,8 @@ python run.py
 
 ---
 
+## ⚙️ Configuration
+Loyihani sozlash uchun `.env.example` faylidan namuna olib, `.env` faylini yarating:
+* `BOT_TOKEN`: Telegram bot tokeni.
+* `ADMIN_ID`: Admin telegram ID-si.
+* `PAYMENT_TOKEN`: Click/Payme provayder tokeni.
