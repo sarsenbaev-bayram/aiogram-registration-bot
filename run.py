@@ -1,16 +1,18 @@
 import asyncio
 import logging
-
 import os
-from dotenv import load_dotenv
 
 from aiogram import Bot, Dispatcher
-from config import TOKEN
 from apps.handlers import router
 from apps.database import init_db
-load_dotenv
+from dotenv import load_dotenv
 
-TOKEN = os.getenv("BOT_TOKEN")
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 async def main():
@@ -25,9 +27,3 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("Exit")
-
-
-
-
-
-
